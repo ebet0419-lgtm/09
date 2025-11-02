@@ -4,19 +4,23 @@
 
 int main(int argc, char *argv[])
 {
-    int i, average;
-    int sum;
+    int i;
     int grade[SIZE];
+    int score[SIZE];
     
-    sum=0;
     for(i=0;i<SIZE;i++)
     {
-     printf("학생 성적을 입력하세요:");
-     scanf("%d",&grade[i]);
-     sum+=grade[i];
+                       grade[i]=rand()%100; 
      }
-     average=sum/SIZE;
-     printf("성적 평균:%d\n",average); 
+     
+    for(i=0;i<SIZE;i++)
+    {
+                       score[i]=grade[i];
+                       }
+                       
+    for (i=0;i<SIZE;i++)
+        printf("grade[%i]=%i, score[%i]=%i\n",
+        i, grade[i],i,score[i]);
   
   system("PAUSE");	
   return 0;
